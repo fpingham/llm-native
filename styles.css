@@ -356,3 +356,56 @@ section:focus-within {
     box-shadow: 0 0 20px rgba(45, 90, 240, 0.15);
     outline: none;
 }
+
+.discord-section {
+    text-align: center;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.discord-section:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.discord-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background: linear-gradient(90deg, var(--accent-color), #4776E6);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.discord-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(45, 90, 240, 0.4);
+}
+
+.discord-button .fa-discord {
+    font-size: 1.2em;
+}
+
+.button-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.discord-button:hover .button-glow {
+    opacity: 1;
+}
