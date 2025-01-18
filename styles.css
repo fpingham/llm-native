@@ -220,3 +220,45 @@ h4 {
     cursor: pointer;
     transition: 0.2s;
 }
+
+.thumbnail {
+    width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Also add a style for the small logo */
+.logo-small {
+    max-width: 16px;
+    max-height: 16px;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+footer {
+    margin-top: 4rem;
+    padding: 1.5rem 0;
+    background: rgba(17, 17, 17, 0.7);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    backdrop-filter: blur(10px);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+    position: relative;
+}
