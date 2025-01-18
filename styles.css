@@ -1,7 +1,7 @@
 :root {
     --text-color: rgba(255, 255, 255, 0.95);
     --text-secondary: rgba(255, 255, 255, 0.7);
-    --bg-color: #000000;
+    --bg-color: #000;
     --bg-secondary: #111111;
     --accent-color: #2D5AF0;
     --spacing-unit: 1rem;
@@ -14,14 +14,12 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
+    color: #f2f2f2;
     font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    padding: var(--spacing-unit);
-    letter-spacing: -0.011em;
-    position: relative;
-    /* overflow: hidden; */
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
 }
 
 /* "Scanning line" effect over entire screen */
@@ -54,8 +52,9 @@ body::after {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 3rem 1rem;
 }
 
 header {
@@ -78,6 +77,8 @@ h1 {
     margin-bottom: calc(var(--spacing-unit) * 1.5);
     color: var(--text-color);
     letter-spacing: -0.03em;
+    text-align: center;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
 }
 
 .title-line::after {
@@ -90,6 +91,11 @@ h1 {
     background: var(--accent-color);
     transform-origin: left;
     animation: lineGrow 1s ease-out forwards;
+}
+
+.title-line:hover {
+    transform: scale(1.02);
+    text-shadow: 0 0 15px rgba(45, 90, 240, 0.4);
 }
 
 .terminal-line {
@@ -110,17 +116,24 @@ h1 {
 }
 
 section {
-    background-color: var(--bg-secondary);
+    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
     padding: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
 .text-content p {
     font-size: 1.1rem;
-    margin-bottom: calc(var(--spacing-unit) * 1.25);
+    margin-bottom: 1.2rem;
     color: var(--text-secondary);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 @keyframes blink {
@@ -155,12 +168,12 @@ section {
 
 h2 {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     margin-bottom: calc(var(--spacing-unit) * 1.5);
     color: var(--text-secondary);
     font-weight: normal;
     letter-spacing: 0;
-    text-shadow: 0 0 7px rgba(45, 90, 240, 0.5);
+    text-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
 }
 
 h3 {
@@ -201,6 +214,11 @@ h4 {
     left: 0;
     color: var(--accent-color);
     font-family: 'Share Tech Mono', monospace;
+    transition: transform 0.2s ease;
+}
+
+.text-content li:hover::before {
+    transform: translateX(3px);
 }
 
 @keyframes lineGrow {
@@ -256,9 +274,45 @@ footer {
     align-items: center;
     justify-content: center;
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--spacing-unit);
+    padding: 20px;
     position: relative;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.manifesto h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #d4af37;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.manifesto p {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.glitch {
+    animation: glitch-effect 0.2s linear alternate;
+}
+
+@keyframes glitch-effect {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    33% {
+        transform: translate(-1.5px, -1.5px);
+    }
+
+    66% {
+        transform: translate(1.5px, 1.5px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
 }
