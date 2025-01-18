@@ -20,6 +20,17 @@ body {
     margin: 0;
     padding: 0;
     transition: all 0.3s ease;
+    animation: gradientShift 15s ease infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% {
+        background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
+    }
+
+    100% {
+        background: radial-gradient(circle at top, #1a1a1a 0%, #080808 100%);
+    }
 }
 
 /* "Scanning line" effect over entire screen */
@@ -33,10 +44,10 @@ body::after {
     pointer-events: none;
     background: repeating-linear-gradient(to bottom,
             rgba(255, 255, 255, 0.02),
-            rgba(255, 255, 255, 0.02) 1px,
+            rgba(45, 90, 240, 0.02) 1px,
             transparent 2px,
             transparent 4px);
-    animation: scan 5s linear infinite;
+    animation: scan 8s linear infinite;
     z-index: 999;
 }
 
@@ -113,6 +124,25 @@ h1 {
 
 .cursor {
     animation: blink 1s step-end infinite;
+    background: var(--accent-color);
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    vertical-align: middle;
+    opacity: 0.7;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 section {
@@ -259,7 +289,7 @@ h4 {
 footer {
     margin-top: 4rem;
     padding: 1.5rem 0;
-    background: rgba(17, 17, 17, 0.7);
+    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
     width: 100vw;
     position: relative;
     left: 50%;
@@ -267,6 +297,11 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
     backdrop-filter: blur(10px);
+    transition: background 0.3s ease;
+}
+
+footer:hover {
+    background: linear-gradient(145deg, rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.7));
 }
 
 .footer-content {
@@ -315,4 +350,9 @@ footer {
     100% {
         transform: translate(0, 0);
     }
+}
+
+section:focus-within {
+    box-shadow: 0 0 20px rgba(45, 90, 240, 0.15);
+    outline: none;
 }
