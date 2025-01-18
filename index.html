@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Native BA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="glitch-overlay"></div>
+    <div class="container">
+        <header>
+            <h1 class="title-line">LLM Native BA</h1>
+            <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span class="typed-text"></span>
+                <span class="cursor">█</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="manifesto">
+                <h2><i class="fas fa-code"></i> > manifesto</h2>
+                <div class="text-content">
+                    <h3>The LLM Native Manifesto</h3>
+                    <h4>The Cognitive Automation Revolution</h4>
+
+                    <p>The Industrial Revolution birthed the factory, concentrating human labor in manufacturing
+                        centers. The Digital Revolution followed with the personal computer, creating digital workplaces
+                        that consumed our cognitive bandwidth. Just as factory automation liberated workers from
+                        mechanical tasks, cognitive automation is now freeing knowledge workers from routine computer
+                        operations.</p>
+
+                    <p>People's potential shouldn't be consumed by routine digital operations - their unique
+                        capabilities shine in creative problem-solving, human relationships, and strategic thinking. Our
+                        mission is to liberate cognitive bandwidth from mechanical computer interactions, allowing focus
+                        on higher-value activities. To achieve this, we must minimize digital friction and manual
+                        computer operation. Technology should adapt to users, not force users to adapt to it.</p>
+
+                    <p>The path forward is inevitable; cognitive automation is the natural evolution. LLMs are
+                        capability multipliers, enhancing rather than replacing human expertise. But implementation is
+                        everything. Our greatest challenge is experience design - taste is the ultimate currency.
+                        Technology must be smooth, clean, and invisible, enhancing work without disrupting it.</p>
+
+                    <h4>The LLM Native Company</h4>
+                    <p>Our objective is to create LLM native companies - organizations that fully embrace this new
+                        paradigm of cognitive automation. An LLM native company has LLMs engrained seamlessly in two
+                        fronts:</p>
+
+                    <ul>
+                        <li>In the Team: LLMs become the cognitive middleware for every employee, turning intention into
+                            execution without digital friction.</li>
+                        <li>In the Product: Intelligence is woven throughout the experience, handling complexity
+                            invisibly while flowing naturally with user actions.</li>
+                    </ul>
+
+                    <h4>Core Purpose</h4>
+                    <p>Our purpose is steadfast: to free human potential from routine digital operations, enabling
+                        professionals to focus on what matters most - creating quality products and services that serve
+                        our communities.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Typing effect
+        const text = "echo 'Liberating human potential through cognitive automation'";
+        const typedTextSpan = document.querySelector(".typed-text");
+        let charIndex = 0;
+
+        function type() {
+            if (charIndex < text.length) {
+                typedTextSpan.textContent += text.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            }
+        }
+
+        // Start typing effect when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 1000);
+        });
+
+        // Add glitch effect randomly
+        setInterval(() => {
+            document.body.classList.add('glitch');
+            setTimeout(() => {
+                document.body.classList.remove('glitch');
+            }, 200);
+        }, 5000);
+    </script>
+</body>
+
+</html>
