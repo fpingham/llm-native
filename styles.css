@@ -424,3 +424,76 @@ section:focus-within {
     font-size: 1.1rem;
     letter-spacing: 0.05em;
 }
+
+/* Partners carousel styles */
+.partners {
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.partners:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.logo-carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.logo-carousel::before,
+.logo-carousel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+
+.logo-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #1a1a1a, transparent);
+}
+
+.logo-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #1a1a1a, transparent);
+}
+
+.logo-slide {
+    display: inline-block;
+    animation: slide 20s linear infinite;
+}
+
+.logo-slide a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 3rem;
+}
+
+.logo-slide img {
+    height: 40px;
+    margin: 0;
+    vertical-align: middle;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.logo-slide img:hover {
+    opacity: 1;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
