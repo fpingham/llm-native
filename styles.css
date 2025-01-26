@@ -14,7 +14,7 @@
 }
 
 body {
-    background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
+    background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
     color: #f2f2f2;
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -35,31 +35,7 @@ body {
 
 /* "Scanning line" effect over entire screen */
 body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: repeating-linear-gradient(to bottom,
-            rgba(255, 255, 255, 0.02),
-            rgba(45, 90, 240, 0.02) 1px,
-            transparent 2px,
-            transparent 4px);
-    animation: scan 8s linear infinite;
-    z-index: 999;
-}
-
-/* Slow vertical scrolling to emulate old CRT scanning lines */
-@keyframes scan {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-100px);
-    }
+    display: none;
 }
 
 .container {
@@ -79,17 +55,9 @@ h1 {
 }
 
 .title-line {
-    font-size: 3.5rem;
-    font-weight: 600;
-    font-family: 'Share Tech Mono', monospace;
-    position: relative;
-    display: inline-block;
-    padding-bottom: calc(var(--spacing-unit) * 0.5);
-    margin-bottom: calc(var(--spacing-unit) * 1.5);
-    color: var(--text-color);
-    letter-spacing: -0.03em;
-    text-align: center;
-    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    font-size: 2.8rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
 }
 
 .title-line::after {
@@ -110,12 +78,10 @@ h1 {
 }
 
 .terminal-line {
-    font-family: 'Share Tech Mono', monospace;
-    margin-top: calc(var(--spacing-unit) * 2);
-    padding: var(--spacing-unit);
-    background: var(--bg-secondary);
-    border-radius: 4px;
-    letter-spacing: 0;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
 }
 
 .prompt {
@@ -146,24 +112,25 @@ h1 {
 }
 
 section {
-    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
+    background: rgba(17, 17, 17, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 section:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transform: none;
+    border-color: rgba(255, 255, 255, 0.1);
 }
 
 .text-content p {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes blink {
@@ -198,12 +165,11 @@ section:hover {
 
 h2 {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: calc(var(--spacing-unit) * 1.5);
-    color: var(--text-secondary);
-    font-weight: normal;
-    letter-spacing: 0;
-    text-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+    color: var(--text-color);
+    opacity: 0.8;
+    text-shadow: none;
 }
 
 h3 {
@@ -367,6 +333,7 @@ section:focus-within {
     text-align: center;
     background: transparent !important;
     box-shadow: none !important;
+    margin-top: 3rem;
 }
 
 .discord-section:hover {
@@ -377,43 +344,34 @@ section:focus-within {
 .discord-button {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
-    padding: 16px 32px;
-    background: linear-gradient(90deg, var(--accent-color), #4776E6);
-    color: white;
+    gap: 10px;
+    padding: 14px 28px;
+    background: rgba(45, 90, 240, 0.1);
+    border: 1px solid rgba(45, 90, 240, 0.3);
+    color: var(--text-color);
     text-decoration: none;
     border-radius: 4px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: all 0.2s ease;
 }
 
 .discord-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(45, 90, 240, 0.4);
+    background: rgba(45, 90, 240, 0.15);
+    border-color: rgba(45, 90, 240, 0.5);
+    transform: translateY(-1px);
 }
 
 .discord-button .fa-discord {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    opacity: 0.9;
 }
 
+/* Remove the glow effect as it's not needed */
 .button-glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.discord-button:hover .button-glow {
-    opacity: 1;
+    display: none;
 }
 
 .subtitle {
