@@ -1,9 +1,10 @@
 :root {
-    --text-color: rgba(255, 255, 255, 0.95);
-    --text-secondary: rgba(255, 255, 255, 0.7);
-    --bg-color: #000;
-    --bg-secondary: #111111;
-    --accent-color: #2D5AF0;
+    --text-color: rgba(233, 229, 225, 0.95);
+    --text-secondary: rgba(233, 229, 225, 0.7);
+    --bg-color: #121110;
+    --bg-secondary: #1a1917;
+    --accent-color: #7C93F0;
+    /* Softer blue */
     --spacing-unit: 1rem;
 }
 
@@ -14,8 +15,8 @@
 }
 
 body {
-    background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
-    color: #f2f2f2;
+    background: linear-gradient(180deg, #151413 0%, #121110 100%);
+    color: var(--text-color);
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
@@ -58,6 +59,7 @@ h1 {
     letter-spacing: -0.02em;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
+    color: var(--text-color);
 }
 
 .title-line::after {
@@ -74,7 +76,7 @@ h1 {
 
 .title-line:hover {
     transform: scale(1.02);
-    text-shadow: 0 0 15px rgba(45, 90, 240, 0.4);
+    text-shadow: 0 0 15px rgba(124, 147, 240, 0.4);
 }
 
 .title-line:hover::after {
@@ -134,7 +136,8 @@ section:hover {
 .text-content p {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(233, 229, 225, 0.85);
+    opacity: 0.95;
 }
 
 @keyframes blink {
@@ -183,7 +186,7 @@ h3 {
     color: var(--text-color);
     font-weight: 600;
     letter-spacing: -0.02em;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 5px rgba(233, 229, 225, 0.15);
 }
 
 h4 {
@@ -193,7 +196,7 @@ h4 {
     color: var(--text-color);
     font-weight: 500;
     letter-spacing: -0.01em;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 5px rgba(233, 229, 225, 0.15);
 }
 
 .text-content ul {
@@ -260,7 +263,7 @@ h4 {
 footer {
     margin-top: 4rem;
     padding: 1.5rem 0;
-    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
+    background: linear-gradient(145deg, rgba(26, 25, 23, 0.8), rgba(26, 25, 23, 0.6));
     width: 100vw;
     position: relative;
     left: 50%;
@@ -272,7 +275,7 @@ footer {
 }
 
 footer:hover {
-    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
+    background: linear-gradient(145deg, rgba(26, 25, 23, 0.8), rgba(26, 25, 23, 0.6));
 }
 
 .footer-content {
@@ -296,7 +299,7 @@ footer:hover {
 }
 
 .manifesto h2 {
-    color: #fff;
+    color: var(--text-color);
     border: none;
     background: none;
     padding: 1rem 0;
@@ -345,8 +348,8 @@ section:focus-within {
     align-items: center;
     gap: 10px;
     padding: 14px 28px;
-    background: rgba(45, 90, 240, 0.1);
-    border: 1px solid rgba(45, 90, 240, 0.3);
+    background: rgba(124, 147, 240, 0.1);
+    border: 1px solid rgba(124, 147, 240, 0.3);
     color: var(--text-color);
     text-decoration: none;
     border-radius: 4px;
@@ -358,8 +361,8 @@ section:focus-within {
 }
 
 .discord-button:hover {
-    background: rgba(45, 90, 240, 0.15);
-    border-color: rgba(45, 90, 240, 0.5);
+    background: rgba(124, 147, 240, 0.15);
+    border-color: rgba(124, 147, 240, 0.5);
     transform: none;
 }
 
