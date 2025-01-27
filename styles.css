@@ -19,17 +19,15 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    transition: all 0.3s ease;
-    animation: gradientShift 15s ease infinite alternate;
+    transition: none;
+    animation: none;
 }
 
 @keyframes gradientShift {
-    0% {
-        background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
-    }
 
+    0%,
     100% {
-        background: radial-gradient(circle at top, #1a1a1a 0%, #080808 100%);
+        background: radial-gradient(circle at top, #1a1a1a 0%, #0d0d0d 100%);
     }
 }
 
@@ -54,13 +52,14 @@ h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Title hover effects */
 .title-line {
     font-size: 2.8rem;
     letter-spacing: -0.02em;
     margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
-/* Make the blue line appear only on hover */
 .title-line::after {
     content: '';
     display: block;
@@ -69,22 +68,17 @@ h1 {
     background: var(--accent-color);
     margin-top: 0.5rem;
     opacity: 0;
-    /* Start with opacity 0 */
-    animation: none;
-    /* Remove default animation */
     transform-origin: left;
     transition: opacity 0.3s ease;
-    /* Add transition for smooth appearance */
-}
-
-.title-line:hover::after {
-    opacity: 0.5;
-    /* Show the line on hover */
 }
 
 .title-line:hover {
     transform: scale(1.02);
     text-shadow: 0 0 15px rgba(45, 90, 240, 0.4);
+}
+
+.title-line:hover::after {
+    opacity: 0.5;
 }
 
 .terminal-line {
@@ -129,12 +123,12 @@ section {
     margin-bottom: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
-    transition: all 0.2s ease;
+    transition: none;
 }
 
 section:hover {
     transform: none;
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .text-content p {
@@ -220,11 +214,7 @@ h4 {
     left: 0;
     color: var(--accent-color);
     font-family: 'Share Tech Mono', monospace;
-    transition: transform 0.2s ease;
-}
-
-.text-content li:hover::before {
-    transform: translateX(3px);
+    transition: none;
 }
 
 @keyframes lineGrow {
@@ -237,12 +227,17 @@ h4 {
     }
 }
 
-/* Optional: Glitch hover effect on clickable links or headings */
+/* Remove hover effect on text content */
 .text-content p:hover,
 .text-content li:hover {
-    filter: drop-shadow(0 0 5px var(--accent-color));
-    cursor: pointer;
-    transition: 0.2s;
+    filter: none;
+    cursor: default;
+    transition: none;
+}
+
+/* Remove hover transform on list items arrow */
+.text-content li:hover::before {
+    transform: none;
 }
 
 .thumbnail {
@@ -273,11 +268,11 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
     backdrop-filter: blur(10px);
-    transition: background 0.3s ease;
+    transition: none;
 }
 
 footer:hover {
-    background: linear-gradient(145deg, rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.7));
+    background: linear-gradient(145deg, rgba(17, 17, 17, 0.8), rgba(17, 17, 17, 0.6));
 }
 
 .footer-content {
@@ -316,29 +311,19 @@ footer:hover {
 }
 
 .glitch {
-    animation: glitch-effect 0.2s linear alternate;
+    animation: none;
 }
 
 @keyframes glitch-effect {
-    0% {
-        transform: translate(0, 0);
-    }
 
-    33% {
-        transform: translate(-1.5px, -1.5px);
-    }
-
-    66% {
-        transform: translate(1.5px, 1.5px);
-    }
-
+    0%,
     100% {
-        transform: translate(0, 0);
+        transform: none;
     }
 }
 
 section:focus-within {
-    box-shadow: 0 0 20px rgba(45, 90, 240, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     outline: none;
 }
 
@@ -369,13 +354,13 @@ section:focus-within {
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    transition: all 0.2s ease;
+    transition: none;
 }
 
 .discord-button:hover {
     background: rgba(45, 90, 240, 0.15);
     border-color: rgba(45, 90, 240, 0.5);
-    transform: translateY(-1px);
+    transform: none;
 }
 
 .discord-button .fa-discord {
@@ -453,11 +438,11 @@ section:focus-within {
     margin: 0;
     vertical-align: middle;
     opacity: 0.7;
-    transition: opacity 0.3s ease;
+    transition: none;
 }
 
 .logo-slide img:hover {
-    opacity: 1;
+    opacity: 0.7;
 }
 
 @keyframes slide {
