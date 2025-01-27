@@ -346,6 +346,7 @@ section:focus-within {
     text-align: center;
     background: transparent !important;
     box-shadow: none !important;
+    border: none;
     margin-top: 3rem;
 }
 
