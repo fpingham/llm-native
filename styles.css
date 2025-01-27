@@ -44,7 +44,7 @@ body::after {
 }
 
 header {
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 h1 {
@@ -83,38 +83,11 @@ h1 {
     opacity: 0.5;
 }
 
-.terminal-line {
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
-}
-
-.prompt {
-    margin-right: 0.5rem;
-}
-
+/* Remove terminal-related styles */
+.terminal-line,
+.prompt,
 .cursor {
-    animation: blink 1s step-end infinite;
-    background: var(--accent-color);
-    display: inline-block;
-    width: 2px;
-    height: 1em;
-    vertical-align: middle;
-    opacity: 0.7;
-    margin-left: 2px;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 0.7;
-    }
-
-    50% {
-        opacity: 0;
-    }
+    display: none;
 }
 
 section {

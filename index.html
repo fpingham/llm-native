@@ -18,11 +18,6 @@
         <header>
             <h1 class="title-line">LLM Native BA</h1>
             <div class="subtitle">Buenos Aires · Argentina</div>
-            <div class="terminal-line">
-                <span class="prompt">$</span>
-                <span class="typed-text"></span>
-                <span class="cursor">█</span>
-            </div>
         </header>
 
         <main>
@@ -103,24 +98,6 @@
     </div>
 
     <script>
-        // Typing effect
-        const text = "echo 'Automate the repetitive'";
-        const typedTextSpan = document.querySelector(".typed-text");
-        let charIndex = 0;
-
-        function type() {
-            if (charIndex < text.length) {
-                typedTextSpan.textContent += text.charAt(charIndex);
-                charIndex++;
-                setTimeout(type, 100);
-            }
-        }
-
-        // Start typing effect when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(type, 1000);
-        });
-
         // Add glitch effect randomly
         setInterval(() => {
             document.body.classList.add('glitch');
