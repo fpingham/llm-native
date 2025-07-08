@@ -49,7 +49,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Axel German Bernardo Alderete",
-    title: "Head of Infraestructure ",
+    title: "Head of Infrastructure",
     company: "@Lemon",
     linkedin: "https://www.linkedin.com/in/axel-german-bernardo-alderete-2a0361138/",
     image: "/speakers/axel-german-bernardo-alderete.png"
@@ -291,7 +291,7 @@ const schedule: Session[] = [
   },
   {
     time: "21:15",
-    title: "LLMnative evals: the winning workflow",
+    title: "LLMNative evals: the winning workflow",
     duration: "15 min",
     type: "talk",
     speakers: [speakers[13]],
