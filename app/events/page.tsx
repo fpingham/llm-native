@@ -468,13 +468,28 @@ export default function EventPage() {
         </div>
       </section>
       
-      {/* Animated Divider */}
-      <div className="flex justify-center items-center h-16">
-        <div className="flex items-center gap-4">
-          <div className="w-2 h-2 bg-gray-600 rounded-full animate-ping"></div>
-          <div className="w-3 h-3 bg-gray-500 rounded-full animate-ping" style={{animationDelay: '300ms'}}></div>
-          <div className="w-2 h-2 bg-gray-600 rounded-full animate-ping" style={{animationDelay: '600ms'}}></div>
+      {/* Energy Beam Divider */}
+      <div className="relative h-24 overflow-hidden">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full relative">
+            {/* Energy beam */}
+            <div className="absolute h-1 w-32 bg-gradient-to-r from-transparent via-cyan-400 to-transparent blur-sm animate-[pingpong_3s_ease-in-out_infinite]">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"></div>
+            </div>
+          </div>
         </div>
+        
+        {/* Add custom animation in style tag */}
+        <style jsx>{`
+          @keyframes pingpong {
+            0%, 100% { 
+              transform: translateX(0);
+            }
+            50% { 
+              transform: translateX(calc(100vw - 8rem));
+            }
+          }
+        `}</style>
       </div>
 
       {/* About Section */}
