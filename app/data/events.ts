@@ -601,6 +601,11 @@ export const eventPhotos: Photo[] = [
     id: "10",
     src: "/events/meetup-3_5.jpeg",
     alt: "LLM Native community event",
+  },
+  {
+    id: "11",
+    src: "/events/meetup-3_6.jpg",
+    alt: "LLM Native community event",
   }
 ];
 
