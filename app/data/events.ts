@@ -546,6 +546,30 @@ export const testimonials: Testimonial[] = [
     content: "Por más eventos asiii",
     postUrl: "https://x.com/sufrang737"
   },
+  {
+    name: "Mauro Casas Balsamello",
+    role: "Software Engineer",
+    content: "Presente en el evento de LLM Native, un gran iniciativa!",
+    postUrl: "https://www.linkedin.com/posts/maurocasas_we-hosted-another-llm-native-meetup-at-lemon-activity-7351277154321494018-S4VA?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOpDW4BKl77N-jtdFy9or2naFa3Qqj9FpU"
+  },
+  {
+    name: "Juan Marí",
+    role: "AI Engineer",
+    content: "El viernes pasado se realizó un nuevo encuentro de la comunidad llmnative.dev, esta vez en las oficinas de Lemon. Tuvimos la oportunindad de escuchar sobre novedosos casos de uso de LLMs, incluyendo experiencias reales con MCPs en producción.",
+    postUrl: "https://www.linkedin.com/posts/juan-mar%C3%AD-29ab3b20a_el-viernes-pasado-se-realiz%C3%B3-un-nuevo-encuentro-activity-7350626607444758529-2rd5?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOpDW4BKl77N-jtdFy9or2naFa3Qqj9FpU"
+  },
+  {
+    name: "Santiago Cuevas",
+    role: "AI Engineer - Data Scientist",
+    content: "🙏Lucas Petralli y Lautaro Gesuelli Pinto, gracias por organizar! Un lujazo el nivel de la comunidad.",
+    postUrl: "https://www.linkedin.com/posts/santicuevas_we-hosted-another-llm-native-meetup-at-lemon-activity-7351037938362703872-nIPB?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOpDW4BKl77N-jtdFy9or2naFa3Qqj9FpU"
+  },
+  {
+    name: "Andrés Avila Páez",
+    role: "Co-Founder @ Arturito.ai",
+    content: "🚀 Estuvimos en el 3er encuentro de LLMNative en las oficinas de Lemon, y salimos con la cabeza explotada 💥 Modelos en producción, agentes seguros, LLMs corriendo local, SEO pensando en LLMs, contenido generativo y evals reales para mejorar lo que ya está corriendo.",
+    postUrl: "https://www.linkedin.com/posts/romanavila_estuvimos-en-el-3er-encuentro-de-llmnative-activity-7351026863806263296-N0Du?utm_source=share&utm_medium=member_desktop&rcm=ACoAACOpDW4BKl77N-jtdFy9or2naFa3Qqj9FpU"
+  },
 ];
 
 // All event photos from the events folder
