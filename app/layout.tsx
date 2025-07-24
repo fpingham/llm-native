@@ -20,11 +20,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_AR',
     siteName: 'LLM Native Buenos Aires',
+    images: [
+      {
+        url: '/logo-small.png',
+        width: 512,
+        height: 512,
+        alt: 'LLM Native Buenos Aires Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'LLM Native BA',
     description: 'Join the pioneers building the future with AI in Buenos Aires',
+    images: ['/logo-small.png'],
   },
   icons: {
     icon: '/logo-small.png',
