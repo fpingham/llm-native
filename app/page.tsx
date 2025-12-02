@@ -45,7 +45,7 @@ export default function LandingPage() {
                 Events
               </Link>
               <a 
-                href="https://discord.gg/dmgG2wkhSu"
+                href="https://discord.gg/ZPRJ4H5y"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-full transition-colors ml-4"
                 target="_blank"
                 rel="noopener noreferrer"
