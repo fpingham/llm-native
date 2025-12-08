@@ -189,6 +189,49 @@ export const allSpeakers: Speaker[] = [
     image: "/speakers/axel-german-bernardo-alderete.png",
     showOnLanding: false
   },
+  // November 2025 Meetup @ Mercado Libre - Randomized order
+  {
+    name: "Isaac Guillermo Gaete",
+    title: "AI Engineer",
+    company: "@TiendaNube",
+    image: "/speakers/isaac-guillermo-gaete.png",
+    showOnLanding: true
+  },
+  {
+    name: "Federico Barabasch",
+    title: "Sr Data & Analytics Expert",
+    company: "@Mercado Libre",
+    image: "/speakers/federico-barabasch.png",
+    showOnLanding: true
+  },
+  {
+    name: "Lucas Agustín Vittor",
+    title: "AI Researcher",
+    company: "@Harvard",
+    image: "/speakers/lucas-agustin-vittor.png",
+    showOnLanding: true
+  },
+  {
+    name: "Pablo Zamudio",
+    title: "ML Sr Expert",
+    company: "@Mercado Libre",
+    image: "/speakers/pablo-zamudio.png",
+    showOnLanding: true
+  },
+  {
+    name: "Pablo Lorenzatto",
+    title: "CTO & Co-Founder",
+    company: "@MUTT DATA",
+    image: "/speakers/pablo-lorenzatto.png",
+    showOnLanding: true
+  },
+  {
+    name: "Javier Cardoso",
+    title: "Sr Software Manager",
+    company: "@MercadoLibre",
+    image: "/speakers/javier-cardoso.png",
+    showOnLanding: true
+  },
 ];
 
 // Helper function to get speakers by names
@@ -221,6 +264,106 @@ export const speakers = currentEventSpeakers;
 export const pastSpeakers = allSpeakers.filter(speaker => speaker.showOnLanding);
 
 export const events: Event[] = [
+  {
+    id: "llm-native-nov-2025",
+    slug: "llm-native-nov-2025",
+    title: "LLM Native @ Mercado Libre",
+    date: "November 28, 2025",
+    time: "18:00 - 22:30",
+    location: "Mercado Libre, Buenos Aires",
+    description: "LLM Native meetup hosted at Mercado Libre featuring community and guest speakers sharing insights on AI agents, MCP platforms, and LLM workflows in production.",
+    speakers: getSpeakersByNames([
+      "Lucas Petralli",
+      "Lautaro Gesuelli Pinto",
+      "Francisco Ingham",
+      "Isaac Guillermo Gaete",
+      "Lucas Agustín Vittor",
+      "Pablo Lorenzatto",
+      "Federico Barabasch",
+      "Pablo Zamudio",
+      "Javier Cardoso"
+    ]),
+    isUpcoming: false,
+    registrationUrl: "https://lu.ma/kpeqi6q7",
+    schedule: [
+      {
+        time: "18:00",
+        title: "Reception & Check-in",
+        duration: "45 min",
+        type: "networking",
+        description: "Grab a drink, and meet fellow builders."
+      },
+      {
+        time: "18:45",
+        title: "Welcome & Community Introduction",
+        duration: "15 min",
+        type: "talk",
+        description: "Opening remarks and community vision",
+        speakers: ["Lucas Petralli", "Lautaro Gesuelli Pinto", "Francisco Ingham"]
+      },
+      {
+        time: "19:00",
+        title: "Nuvemshop Agent AI solution for conversational commerce",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Isaac Guillermo Gaete"]
+      },
+      {
+        time: "19:20",
+        title: "Doing Science at Scale with LLMs",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Lucas Agustín Vittor"]
+      },
+      {
+        time: "19:40",
+        title: "Building Workflows with Uncensored LLMs in Sensitive Environments",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Pablo Lorenzatto"]
+      },
+      {
+        time: "20:00",
+        title: "🍸 Break",
+        duration: "15 min",
+        type: "break"
+      },
+      {
+        time: "20:15",
+        title: "Coding Agents: Evolving from Vibe Coding to Spec-Driven Development",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Federico Barabasch"]
+      },
+      {
+        time: "20:35",
+        title: "MCP Platform: Building MCPs that are Easy, Secure, and Scalable",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Pablo Zamudio"]
+      },
+      {
+        time: "20:55",
+        title: "Massive Ops: Solving Repetitive Tasks Before They Become Technical Debt",
+        duration: "20 min",
+        type: "talk",
+        speakers: ["Javier Cardoso"]
+      },
+      {
+        time: "21:15",
+        title: "🍤 Finger Food & Networking",
+        duration: "75 min",
+        type: "networking",
+        description: "Enjoy finger food while discussing the future of AI with the community"
+      },
+      {
+        time: "22:30",
+        title: "⏸️ Closing Remarks",
+        duration: "5 min",
+        type: "talk"
+      }
+    ]
+  },
   {
     id: "llm-native-jul-2025",
     slug: "llm-native-jul-2025",
@@ -362,7 +505,7 @@ export const events: Event[] = [
   {
     id: "llm-native-mar-2025",
     slug: "llm-native-mar-2025",
-    title: "LLMNative BA V1",
+    title: "LLMNative BA V1 @AWS",
     date: "March 11, 2025",
     time: "17:30 - 22:30",
     location: "AWS Office, Buenos Aires",
@@ -492,6 +635,24 @@ export const events: Event[] = [
 ];
 
 export const testimonials: Testimonial[] = [
+  {
+    name: "Jimena Lagorio",
+    role: "Program Management | L&D @ Mercado Libre",
+    content: "La semana pasada vivimos algo enorme junto a la comunidad de LLMs Native",
+    postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7401681239272865792"
+  },
+  {
+    name: "Tadeo Donegana Braunschweig",
+    role: "AI Engineer @ Tiendanube",
+    content: "Si estas construyendo con AI gen, no podes no estar en la comunidad de llmnative 🚀",
+    postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7401682210715742208"
+  },
+  {
+    name: "Facundo Palavecino",
+    role: "ML/AI Engineer | Tech Lead",
+    content: "llmnative: dícese del evento donde builders de la hostia comparten conocimiento y experiencia con el resto. El mejor día para sumarse era ayer. El próximo es hoy. Sumate!",
+    postUrl: "https://www.linkedin.com/feed/update/urn:li:activity:7402451883136782337"
+  },
   {
     name: "Marcelo Cavazzoli",
     role: "chelo.eth 🍋 @ Lemon",
@@ -629,6 +790,26 @@ export const eventPhotos: Photo[] = [
   {
     id: "11",
     src: "/events/meetup-3_6.jpg",
+    alt: "LLM Native community event",
+  },
+  {
+    id: "12",
+    src: "/events/meetup-4_1.jpeg",
+    alt: "LLM Native community event",
+  },
+  {
+    id: "13",
+    src: "/events/meetup-4_2.jpeg",
+    alt: "LLM Native community event",
+  },
+  {
+    id: "14",
+    src: "/events/meetup-4_3.jpeg",
+    alt: "LLM Native community event",
+  },
+  {
+    id: "15",
+    src: "/events/meetup-4_4.jpeg",
     alt: "LLM Native community event",
   }
 ];
