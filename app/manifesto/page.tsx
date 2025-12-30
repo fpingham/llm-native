@@ -106,7 +106,6 @@ export default function ManifestoPage() {
           </h2>
           <div className="space-y-6 text-gray-300">
             <h3 className="text-3xl font-light text-white mb-4">The LLM Native Manifesto</h3>
-            <p className="text-gray-500 text-sm mb-6">January 26, 2025</p>
             <h4 className="text-xl font-medium text-white mb-3">The Next Wave of Automation</h4>
             <p className="leading-relaxed">
               The Industrial Revolution drove massive productivity gains across all industries but trapped
@@ -154,6 +153,7 @@ export default function ManifestoPage() {
             <p className="leading-relaxed">
               Our mission is clear: to eliminate repetitive digital work, helping professionals to focus entirely on creating quality products and services that serve their communities.
             </p>
+            <p className="text-gray-600 text-sm mt-8 text-right italic">— January 26, 2025</p>
           </div>
         </section>
 
