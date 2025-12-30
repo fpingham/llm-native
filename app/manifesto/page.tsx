@@ -123,8 +123,8 @@ export default function ManifestoPage() {
             <p className="leading-relaxed">
               Large Language Models mark a new era of cognitive tools, enhancing human intelligence, not
               replacing it. Success hinges on design that feels natural and flows with human thought. In this
-              domain, taste is the ultimate currency, the difference between tools that enhance and those
-              that hinder. The technology should act as an extension of mind itself, amplifying our work
+              domain, taste is the ultimate currency: the difference between tools that enhance and those
+              that hinder. Technology should act as an extension of mind itself, amplifying our work
               without demanding attention.
             </p>
             <h4 className="text-xl font-medium text-white mb-3 mt-8">The LLM Native Organization</h4>
