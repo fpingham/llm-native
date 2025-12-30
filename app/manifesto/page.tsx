@@ -151,7 +151,7 @@ export default function ManifestoPage() {
             </ul>
             <h4 className="text-xl font-medium text-white mb-3 mt-8">Core Purpose</h4>
             <p className="leading-relaxed">
-              Our mission is to eliminate repetitive digital work, freeing professionals to focus entirely on creating quality products and services that serve their communities.
+              Our mission is clear: to eliminate repetitive digital work, helping professionals to focus entirely on creating quality products and services that serve their communities.
             </p>
           </div>
         </section>
