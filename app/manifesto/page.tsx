@@ -101,69 +101,60 @@ export default function ManifestoPage() {
 
         <main>
           <section className="bg-gray-950/30 backdrop-blur-sm border border-gray-900/50 rounded-lg p-8">
-            <h2 className="text-2xl font-mono mb-6 text-gray-300">
-              <i className="fas fa-code text-gray-600"></i> &gt; manifesto
-            </h2>
-            <div className="space-y-6 text-gray-300">
-              <h3 className="text-3xl font-light text-white mb-4">The LLM Native Manifesto</h3>
-              <h4 className="text-xl font-medium text-white mb-3">The Next Wave of Automation</h4>
-
-              <p className="leading-relaxed">
-                The Industrial Revolution drove massive productivity gains across all industries but trapped
-                workers in factories with mechanical labor. As automation spread, it freed humans from physical toil. Now
-                we see the same cycle: the Digital Revolution boosted productivity but chained workers to screens. Just as mechanical
-                automation freed factory workers, AI is now automating routine digital work. The pattern is
-                clear: technological revolutions first create new repetitive forms of labor, then automation
-                eliminates them.
-              </p>
-
-              <p className="leading-relaxed">
-                Humans excel at building relationships, creative work, expert decision-making, and design. Yet
-                we waste hours on digital busywork and administrative overhead. We need
-                tools that eliminate repetitive digital tasks so people can do meaningful work. Technology
-                should adapt to humans, not force humans to adapt to it.
-              </p>
-
-              <p className="leading-relaxed">
-                Large Language Models mark a new era of cognitive tools - enhancing human intelligence, not
-                replacing it. Success hinges on design that feels natural and flows with human thought. In this
-                domain, taste is the ultimate currency - the difference between tools that enhance and those
-                that hinder. The technology should act as an extension of mind itself, amplifying our work
-                without demanding attention.
-              </p>
-
-              <h4 className="text-xl font-medium text-white mb-3 mt-8">The LLM Native Organization</h4>
-              <p className="leading-relaxed">
-                A new model of work demands organizations built around cognitive tools from the ground up. The
-                LLM native organization works on two levels:
-              </p>
-
-              <ul className="space-y-3 my-4">
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3 mt-1">→</span>
-                  <div>
-                    <strong className="text-white">Internal Systems</strong>: LLMs form an intelligent layer between
-                    workers and digital systems - automating information flow and analysis across the
-                    organization.
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-blue-400 mr-3 mt-1">→</span>
-                  <div>
-                    <strong className="text-white">External Products</strong>: Intelligence weaves throughout the experience,
-                    handling complexity invisibly while flowing naturally with user actions.
-                  </div>
-                </li>
-              </ul>
-
-              <h4 className="text-xl font-medium text-white mb-3 mt-8">Core Purpose</h4>
-              <p className="leading-relaxed">
-                Our mission is clear: eliminate repetitive digital work that consumes valuable time and
-                attention, helping professionals to focus on what matters - creating quality products and services
-                that serve their communities.
-              </p>
-            </div>
-          </section>
+          <h2 className="text-2xl font-mono mb-6 text-gray-300">
+            <i className="fas fa-code text-gray-600"></i> &gt; manifesto
+          </h2>
+          <div className="space-y-6 text-gray-300">
+            <h3 className="text-3xl font-light text-white mb-4">The LLM Native Manifesto</h3>
+            <h4 className="text-xl font-medium text-white mb-3">The Next Wave of Automation</h4>
+            <p className="leading-relaxed">
+              The Industrial Revolution drove massive productivity gains across all industries but trapped
+              workers in factories with mechanical labor. As automation spread, it freed humans from physical toil. Now
+              we see the same cycle: the Digital Revolution boosted productivity but chained workers to screens. Just as mechanical
+              automation freed factory workers, AI is now automating routine digital work. The pattern holds: technological revolutions first create new repetitive forms of labor, then automation
+              eliminates them.
+            </p>
+            <p className="leading-relaxed">
+              Humans excel at building relationships, creative work, expert decision-making, and design. Yet
+              we waste hours on digital busywork and administrative overhead. We need
+              tools that eliminate repetitive digital tasks so people can do meaningful work. Technology
+              should adapt to humans, not force humans to adapt to it.
+            </p>
+            <p className="leading-relaxed">
+              Large Language Models mark a new era of cognitive tools, enhancing human intelligence, not
+              replacing it. Success hinges on design that feels natural and flows with human thought. In this
+              domain, taste is the ultimate currency, the difference between tools that enhance and those
+              that hinder. The technology should act as an extension of mind itself, amplifying our work
+              without demanding attention.
+            </p>
+            <h4 className="text-xl font-medium text-white mb-3 mt-8">The LLM Native Organization</h4>
+            <p className="leading-relaxed">
+              A new model of work demands organizations built around cognitive tools from the ground up. The
+              LLM native organization works on two levels:
+            </p>
+            <ul className="space-y-3 my-4">
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-3 mt-1">→</span>
+                <div>
+                  <strong className="text-white">Internal Systems</strong>: LLMs form an intelligent layer between
+                  workers and digital systems, automating information flow and analysis across the
+                  organization.
+                </div>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-400 mr-3 mt-1">→</span>
+                <div>
+                  <strong className="text-white">External Products</strong>: Intelligence weaves throughout the experience,
+                  handling complexity invisibly while flowing naturally with user actions.
+                </div>
+              </li>
+            </ul>
+            <h4 className="text-xl font-medium text-white mb-3 mt-8">Core Purpose</h4>
+            <p className="leading-relaxed">
+              Our mission is to eliminate repetitive digital work, freeing professionals to focus entirely on creating quality products and services that serve their communities.
+            </p>
+          </div>
+        </section>
 
           <section className="text-center mt-12">
             <a 
