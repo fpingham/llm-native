@@ -113,7 +113,7 @@ export default function LandingPage() {
           {/* Manifesto Preview */}
           <div className="max-w-2xl mx-auto">
             <blockquote className="text-gray-400 text-base leading-relaxed italic">
-              "[…] Large Language Models mark a new era of cognitive tools - enhancing human intelligence, not replacing it. Success hinges on design that feels natural and flows with human thought. In this domain, taste is the ultimate currency - the difference between tools that enhance and those that hinder."
+              "[…] Large Language Models mark a new era of cognitive tools, enhancing human intelligence, not replacing it. Success hinges on design that feels natural and flows with human thought. In this domain, taste is the ultimate currency: the difference between tools that enhance and those that hinder."
             </blockquote>
             <Link 
               href="/manifesto"
