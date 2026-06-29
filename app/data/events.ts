@@ -127,7 +127,7 @@ export const allSpeakers: Speaker[] = [
   {
     name: "Tadeo Donegana Braunschweig",
     title: "AI Engineer",
-    company: "@Lemon",
+    company: "@TiendaNube",
     linkedin: "https://www.linkedin.com/in/tadeo-donegana-braunschweig/",
     twitter: "https://x.com/tadeodonegana",
     image: "/speakers/tadeo-donegana-braunschweig.png",
@@ -232,6 +232,40 @@ export const allSpeakers: Speaker[] = [
     image: "/speakers/javier-cardoso.png",
     showOnLanding: true
   },
+  // January 2026 - LLM Native PDE @ Punta Tech Week
+  {
+    name: "Miguel Langone",
+    title: "Co-founder & CTO",
+    company: "@Horizon",
+    linkedin: "https://www.linkedin.com/in/miguellangone/",
+    image: "/speakers/miguel-langone.png",
+    showOnLanding: true
+  },
+  {
+    name: "Santiago Castillo",
+    title: "Head of AI and ML",
+    company: "@Akua",
+    linkedin: "https://www.linkedin.com/in/santiago-castillo-austt/",
+    image: "/speakers/santiago-castillo.png",
+    showOnLanding: true
+  },
+  {
+    name: "Javier Quincke",
+    title: "VP of Engineering & AI",
+    company: "@Braven",
+    linkedin: "https://www.linkedin.com/in/javier-quincke-44849312b/",
+    image: "/speakers/javier-quincke.png",
+    showOnLanding: true
+  },
+  // April 2026 - Buenos Aires LangChain Meetup @ MODO
+  {
+    name: "Alessandro Paolini",
+    title: "Software Engineer",
+    company: "@TiendaNube",
+    linkedin: "https://www.linkedin.com/in/alessandropaolini/",
+    image: "/speakers/alessandro-paolini.png",
+    showOnLanding: true
+  },
 ];
 
 // Helper function to get speakers by names
@@ -264,6 +298,174 @@ export const speakers = currentEventSpeakers;
 export const pastSpeakers = allSpeakers.filter(speaker => speaker.showOnLanding);
 
 export const events: Event[] = [
+  {
+    id: "langchain-meetup-ba-apr-2026",
+    slug: "langchain-meetup-ba-apr-2026",
+    title: "LangChain Meetup @ MODO",
+    date: "April 10, 2026",
+    time: "19:30 - 23:00",
+    location: "MODO, Buenos Aires",
+    description: "The first official LangChain Meetup in Argentina, co-organized with the LangChain Community and hosted at MODO. A casual gathering to share questions and hands-on experiences with the LangChain stack, with a focus on LangGraph, LangSmith, and Deep Agents.",
+    speakers: getSpeakersByNames([
+      "Lucas Petralli",
+      "Tadeo Donegana Braunschweig",
+      "Alessandro Paolini",
+      "Javier Quincke"
+    ]),
+    isUpcoming: false,
+    registrationUrl: "https://luma.com/kr0zn9s3",
+    schedule: [
+      {
+        time: "19:30",
+        title: "🏠 Doors Open & Reception",
+        duration: "15 min",
+        type: "networking",
+        description: "Grab a drink, find a seat, and meet fellow builders."
+      },
+      {
+        time: "19:45",
+        title: "Welcome & Intros",
+        duration: "25 min",
+        type: "talk",
+        description: "Opening remarks and a round of introductions.",
+        speakers: ["Lucas Petralli", "Tadeo Donegana Braunschweig"]
+      },
+      {
+        time: "20:10",
+        title: "LangChain Stack @ TiendaNube",
+        duration: "35 min",
+        type: "talk",
+        description: "How TiendaNube runs the LangChain stack in production, plus advanced customization.",
+        speakers: ["Tadeo Donegana Braunschweig", "Alessandro Paolini"]
+      },
+      {
+        time: "20:45",
+        title: "Understanding Deep Agents",
+        duration: "15 min",
+        type: "talk",
+        description: "Concepts, use cases, and best practices for building Deep Agents.",
+        speakers: ["Javier Quincke"]
+      },
+      {
+        time: "21:00",
+        title: "🍤 Networking",
+        duration: "2 hr",
+        type: "networking",
+        description: "Keep the conversation going over drinks and snacks."
+      }
+    ]
+  },
+  {
+    id: "claude-code-hack-night-jan-2026",
+    slug: "claude-code-hack-night-jan-2026",
+    title: "Claude Code Hack Night",
+    date: "January 20, 2026",
+    time: "19:00 - 23:00",
+    location: "Buenos Aires",
+    description: "We're at a breaking point in software development: code is no longer the bottleneck. The magic is now in the workflows (planning, testing, and compounding). A hands-on hack night to Claude Code together: bring a project, trade setups with devs shipping daily, and dial in your plugins, skills, hooks, and md files over pizza and Monster. 🚢",
+    speakers: getSpeakersByNames([
+      "Francisco Ingham"
+    ]),
+    isUpcoming: false,
+    registrationUrl: "https://luma.com/tz15fchl",
+    schedule: [
+      {
+        time: "19:00",
+        title: "🍕 Doors, Pizza & Setup",
+        duration: "30 min",
+        type: "networking",
+        description: "Grab a slice and a Monster, find a spot, and set up your project."
+      },
+      {
+        time: "19:30",
+        title: "Kickoff",
+        duration: "15 min",
+        type: "talk",
+        description: "Why code is no longer the bottleneck, and what we're hacking on tonight.",
+        speakers: ["Francisco Ingham"]
+      },
+      {
+        time: "19:45",
+        title: "Claude Code Hacking",
+        duration: "3 hr",
+        type: "workshop",
+        description: "Bring a project and Claude Code together: your own stuff, a side quest at work, open source, whatever. Trade setups and dial in your plugins, skills, hooks, and md files."
+      },
+      {
+        time: "22:45",
+        title: "Demos & Hangout",
+        duration: "15 min",
+        type: "networking",
+        description: "Show what you shipped and keep the conversation going."
+      }
+    ]
+  },
+  {
+    id: "llm-native-pde-jan-2026",
+    slug: "llm-native-pde-jan-2026",
+    title: "LLM Native @ Punta Tech Week",
+    date: "January 15, 2026",
+    time: "20:00 - 23:30",
+    location: "Punta del Este, Uruguay",
+    locationTagline: "Punta del Este • Uruguay",
+    description: "LLM Native's first edition in Punta del Este, the only technical space for AI engineers at Punta Tech Week. Sponsored by AWS and hosted by Horizon, this invite-only gathering brought together founders, engineers, and practitioners shipping AI-first products for high-signal lightning talks on agents, coding workflows, and retrieval, followed by an informal dinner.",
+    speakers: getSpeakersByNames([
+      "Miguel Langone",
+      "Francisco Ingham",
+      "Santiago Castillo",
+      "Javier Quincke"
+    ]),
+    isUpcoming: false,
+    registrationUrl: "https://luma.com/xo6qq2ci",
+    schedule: [
+      {
+        time: "20:00",
+        title: "🏠 Reception & Check-in",
+        duration: "30 min",
+        type: "networking",
+        description: "Grab a drink and meet fellow builders."
+      },
+      {
+        time: "20:30",
+        title: "AI-Ready Codebases: Accelerating with Spec-Driven Development",
+        duration: "20 min",
+        type: "talk",
+        description: "Why AI systems need AI-ready codebases. This talk covers how Spec-Driven Development turns specifications into a shared contract between humans and LLMs, reducing ambiguity and significantly increasing development speed and reliability.",
+        speakers: ["Miguel Langone"]
+      },
+      {
+        time: "20:50",
+        title: "Towards the Ultimate Coding Workflow",
+        duration: "20 min",
+        type: "talk",
+        description: "The past few months have marked a turning point in AI-assisted development. The combination of Opus 4.5, new versions of Claude Code and parallel background agents has redefined what's possible. We'll explore the stack, plugins and workflows that can help us best leverage this shift to drastically accelerate development teams while improving code quality.",
+        speakers: ["Francisco Ingham"]
+      },
+      {
+        time: "21:10",
+        title: "High-Code Agents at Low-Code Speed: Scaling with a Modern AI Stack",
+        duration: "20 min",
+        type: "talk",
+        description: "Choosing between the simplicity of n8n-like tools and the control of a high-code stack is often a trade-off between speed and capability. We'll dive into how a modern ecosystem, leveraging LangChain, Agentcore, and Claude Code, eliminates this friction, providing the orchestration, infrastructure, and developer velocity to launch and scale high-code agents with the ease of visual automation platforms, without sacrificing architectural control.",
+        speakers: ["Santiago Castillo"]
+      },
+      {
+        time: "21:30",
+        title: "Harnessing deep agents for retrieval",
+        duration: "20 min",
+        type: "talk",
+        description: "We'll demonstrate how deep agents can bypass traditional semantic search when retrieving information from large document volumes, using iterative reasoning and basic tools instead of complex RAG pipelines with embeddings and vector stores. This agentic approach sidesteps challenges like maintaining vector databases, tuning retrieval parameters, and managing chunking strategies, achieving comparable or superior results through direct reasoning, much like a skilled researcher navigating a library.",
+        speakers: ["Javier Quincke"]
+      },
+      {
+        time: "21:50",
+        title: "🚢 Dinner & Chat",
+        duration: "100 min",
+        type: "networking",
+        description: "Short and sweet talks, then ample time to connect over a nice, informal dinner."
+      }
+    ]
+  },
   {
     id: "llm-native-nov-2025",
     slug: "llm-native-nov-2025",
@@ -574,7 +776,7 @@ export const events: Event[] = [
         title: "The Future is Agentic: How Windsurf Writes 90% of its Users' Code",
         duration: "30 min",
         type: "talk",
-        description: "Agentic AI is reshaping software development, shifting AI from an assistive tool to an active collaborator. At Windsurf, we’ve built an integrated coding agent that writes 90% of its users’ code, evolving alongside developers as they build. This talk explores the impact of deeply embedded AI agents—how they accelerate iteration, reduce cognitive load, and change the way engineers approach problem-solving. Drawing from real-world use cases, we’ll discuss the trade-offs of designing agentic systems, the challenges of ensuring reliability in production, and what we’ve learned from features that didn’t make the cut.",
+        description: "Agentic AI is reshaping software development, shifting AI from an assistive tool to an active collaborator. At Windsurf, we’ve built an integrated coding agent that writes 90% of its users’ code, evolving alongside developers as they build. This talk explores the impact of deeply embedded AI agents: how they accelerate iteration, reduce cognitive load, and change the way engineers approach problem-solving. Drawing from real-world use cases, we’ll discuss the trade-offs of designing agentic systems, the challenges of ensuring reliability in production, and what we’ve learned from features that didn’t make the cut.",
         speakers: ["Akshat Agrawal"]
       },
       {
@@ -604,7 +806,7 @@ export const events: Event[] = [
         title: "How Fairway Applies MMLLMs to Navigate Regulatory Compliance in US Automotive Transactions",
         duration: "5 min",
         type: "talk",
-        description: "This talk will explore how a combination of MMLLMs enables rapid and accurate decision-making in the complex landscape of US regulatory vehicle transactions. We will break down the workflow into key stages: text extraction, signature and notarization identification, transaction categorization, regulatory compliance assessment, and final decision-making—all executed in minutes.",
+        description: "This talk will explore how a combination of MMLLMs enables rapid and accurate decision-making in the complex landscape of US regulatory vehicle transactions. We will break down the workflow into key stages: text extraction, signature and notarization identification, transaction categorization, regulatory compliance assessment, and final decision-making, all executed in minutes.",
         speakers: ["Conrado Marturet"]
       },
       {
@@ -612,7 +814,7 @@ export const events: Event[] = [
         title: "Benchmarking Localized Contextual Understanding in LLMs through Regional Literature",
         duration: "5 min",
         type: "talk",
-        description: "DECUBO is a benchmark designed to assess the ability of LLMs to interpret literary texts deeply rooted in the cultural, geographical, and linguistic context of Argentina—particularly the Province of Buenos Aires. By leveraging a representative corpus and a curated set of expert-generated questions from the Provincial Directorate of Libraries and Reading Promotion, DECUBO provides a framework to evaluate the limitations and strengths of LLMs in understanding local references.",
+        description: "DECUBO is a benchmark designed to assess the ability of LLMs to interpret literary texts deeply rooted in the cultural, geographical, and linguistic context of Argentina, particularly the Province of Buenos Aires. By leveraging a representative corpus and a curated set of expert-generated questions from the Provincial Directorate of Libraries and Reading Promotion, DECUBO provides a framework to evaluate the limitations and strengths of LLMs in understanding local references.",
         speakers: ["Tadeo Donegana Braunschweig"]
       },
       {
@@ -811,6 +1013,26 @@ export const eventPhotos: Photo[] = [
     id: "15",
     src: "/events/meetup-4_4.jpeg",
     alt: "LLM Native community event",
+  },
+  {
+    id: "16",
+    src: "/events/meetup-5_1.jpeg",
+    alt: "LLM Native PDE at Punta Tech Week",
+  },
+  {
+    id: "17",
+    src: "/events/meetup-5_2.jpeg",
+    alt: "LLM Native PDE at Punta Tech Week",
+  },
+  {
+    id: "18",
+    src: "/events/meetup-6_1.jpeg",
+    alt: "Buenos Aires LangChain Meetup at MODO",
+  },
+  {
+    id: "19",
+    src: "/events/meetup-6_2.jpeg",
+    alt: "Buenos Aires LangChain Meetup at MODO",
   }
 ];
 
