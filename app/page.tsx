@@ -223,7 +223,7 @@ export default function LandingPage() {
         
         <footer className="mt-24 pt-8 border-t border-gray-900">
           <div className="text-center">
-            <span className="text-gray-500 text-sm">© 2025 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.</span>
+            <span className="text-gray-500 text-sm">© 2026 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.</span>
           </div>
         </footer>
       </div>

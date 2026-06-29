@@ -92,7 +92,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
       {/* Hero Section */}
       <section className="relative flex items-center justify-center px-4 pt-24 pb-12">
         <div className="text-center max-w-5xl mx-auto">
-          <p className="text-gray-500 mb-6 text-sm uppercase tracking-wider">Buenos Aires • Argentina</p>
+          <p className="text-gray-500 mb-6 text-sm uppercase tracking-wider">{event.locationTagline || 'Buenos Aires • Argentina'}</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light mb-4 tracking-tight">
             LLM Native
           </h1>
@@ -270,7 +270,7 @@ export default function EventPage({ params }: { params: { slug: string } }) {
       <footer className="py-8 px-4 border-t border-gray-900">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-gray-500 text-sm">
-            © 2025 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.
+            © 2026 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.
           </p>
         </div>
       </footer>

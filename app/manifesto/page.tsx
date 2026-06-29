@@ -153,7 +153,7 @@ export default function ManifestoPage() {
             <p className="leading-relaxed">
               Our mission is clear: to eliminate repetitive digital work, helping professionals to focus entirely on creating quality products and services that serve their communities.
             </p>
-            <p className="text-gray-600 text-sm mt-8 text-right italic">— January 26, 2025</p>
+            <p className="text-gray-600 text-sm mt-8 text-right italic">January 26, 2025</p>
           </div>
         </section>
 
@@ -178,7 +178,7 @@ export default function ManifestoPage() {
         
         <footer className="mt-24 pt-8 border-t border-gray-900">
           <div className="text-center">
-            <span className="text-gray-500 text-sm">© 2025 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.</span>
+            <span className="text-gray-500 text-sm">© 2026 LLM Native BA <span className="ml-2">🇦🇷</span> All rights reserved.</span>
           </div>
         </footer>
       </div>

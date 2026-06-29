@@ -29,6 +29,8 @@ export interface Event {
   schedule: Session[];
   isUpcoming: boolean;
   registrationUrl?: string;
+  /** City • Country line shown in the event hero. Defaults to "Buenos Aires • Argentina". */
+  locationTagline?: string;
 }
 
 export interface Testimonial {
